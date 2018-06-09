@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Multiple Upload file</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Uploader des fichiers</h1>
+            <form class="" action="index.php" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="files">Indications : taille max 1Mo, jpg/png/gif, nom de fichier = image{id_unique}.ext</label>
+                    <input type="hidden" name="MAX_FILE_SIZE" value="1048576"/>
+                    <input type="hidden" name="POST_MAX_SIZE" value="1048576"/>
+                    <input class="form-control-file" type="file" name="files[]" value="" multiple="multiple">
+                    <input class="btn" type="submit" name="submit" value="Valider">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
