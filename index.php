@@ -28,18 +28,22 @@ if(isset($_POST['submit'])) {
                             $uploaded[$key] = $file_dest;
                         } else {
                             $failed[$key] = "Le téléchargement de '{$file_name}' a échoué.";
+                            $_SESSION['success'] = 0;
                         }
 
                     } else {
                         $failed[$key] = "'{$file_size}' est trop lourd ({$file_error}). La taille ne doit pas dépasser 1Mo.";
+                        $_SESSION['success'] = 0;
                     }
 
                 } else {
                     $failed[$key] = "'{$file_name}' n'a pu être téléchargé. Le code erreur = {$file_error}";
+                    $_SESSION['success'] = 0;
                 }
 
             } else {
                 $failed[$key] = "'{$file_name}' l'extension '{$file_ext}' n'est pas valide.";
+                $_SESSION['success'] = 0;
             }
         }
 
@@ -54,9 +58,10 @@ if(isset($_POST['submit'])) {
 
     $it = new FilesystemIterator(dirname('uploads'));
     $nbrImages = scandir($upload_dir);
-    // var_dump($it);die;
-    // echo '<pre>', print_r($it), '</pre>';
+    // var_dump($nbrImages);die;
 
+$_SESSION['success'] = 1;
+// echo '<pre>', print_r($_SESSION), '</pre>';
 
 }
 
