@@ -65,6 +65,13 @@ $_SESSION['success'] = 1;
 
 }
 
+if(isset($_GET['file']) && !empty($_GET['file']))
+{
+    $fileToDelete = urldecode($_GET['file']);
+    unlink($dir.$fileToDelete);
+    header('Location: upload.php');
+}
+
 
 /* messages d'erreur
 - UPLOAD_ERR_OK = 0 : aucune erreur

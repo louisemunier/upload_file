@@ -1,7 +1,7 @@
 <?php
     require 'index.php';
     session_start();
-    $upload_dir = 'uploads';
+    $upload_dir = 'uploads/';
 
     $_SESSION['nbrFiles'] = count(scandir($upload_dir)) -2;
     $_SESSION['files'] = scandir($upload_dir);
@@ -85,7 +85,7 @@
                          foreach ($_SESSION['files'] as $key => $img) {
                              $loop++;
                              if($key > 1){
-                                 echo '<div class="thumbnail"><img src="'.$upload_dir.'/'.$img.'" alt="'.$img.'" class="img-thumbnail img-responsive"><figcaption>'.$img.'  <a class="remove" href=""><i class="fa fa-trash"></i></a></figcaption></div>';
+                                 echo '<div class="thumbnail"><img src="'.$upload_dir.'/'.$img.'" alt="'.$img.'" class="img-thumbnail img-responsive"><figcaption>'.$img.'  <a class="remove" href="index.php?file='.urlencode($upload_dir.$img).'"><i class="fa fa-trash"></i></a></figcaption></div>';
                              }
                          } ?>
                      </div>
