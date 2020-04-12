@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+console.log("pop");
     var allowedTypes = ['png', 'jpeg', 'jpg', 'gif'];
         fileInput = $('#file'),
         prev = document.querySelector('#prev');
@@ -48,6 +48,6 @@ $(document).ready(function() {
         remove(file);
     }
 
-    $('.alert').alert();
+    // $('.alert').alert();
 
 });
