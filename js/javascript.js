@@ -1,5 +1,5 @@
 $(document).ready(function() {
-console.log("pop");
+
     var allowedTypes = ['png', 'jpeg', 'jpg', 'gif'];
         fileInput = $('#file'),
         prev = document.querySelector('#prev');

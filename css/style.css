@@ -1,0 +1,60 @@
+
+
+p, ul, label, figcaption{
+    font-family: 'quicksand', sans-serif, 'Arial';
+}
+img {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+#message p {
+    color: #167ee6;
+}
+
+.img-preview {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.preview {
+    background-color: #dddddd;
+    padding: 10px;
+}
+.thumbnail {
+    margin: 20px 3px;
+}
+.title {
+    margin: 10px 0;
+    font-family: 'Pacifico', cursive, 'Arial';
+    color: #167ee6;
+}
+i.fa.fa-trash {
+    color: red;
+}
+a.remove {
+    cursor: pointer;
+}
+
+
+/* drag & drop */
+
+#filedrag {
+	display: none;
+	font-weight: bold;
+	text-align: center;
+	padding: 1em 0;
+	margin: 1em 0;
+	color: #555;
+	border: 2px dashed #555;
+	border-radius: 7px;
+	cursor: default;
+}
+
+#filedrag.hover 
+{
+	color: #167ee6;
+	border-color: #167ee6;
+	border-style: solid;
+	box-shadow: inset 0 3px 4px #888;
+}
